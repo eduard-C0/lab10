@@ -1,0 +1,36 @@
+<h2>Pets</h2>
+<table class= "fieldsTable">
+
+  <thead>
+
+  <tr>
+
+    <th> PetId </th>
+
+    <th> Name </th>
+
+    <th> Species </th>
+
+    <th> SellingPrice </th>
+
+  </tr>
+
+  </thead>
+
+  <tbody>
+
+  <tr *ngFor="let pet of pets">
+
+    <td>{{pet.id}}</td>
+
+    <td>{{pet.name}}</td>
+
+    <td>{{pet.species}}</td>
+
+    <td>{{pet.sellingPrice}}</td>
+
+  </tr>
+
+  </tbody>
+
+</table>

@@ -1,0 +1,33 @@
+<h2>Transactions</h2>
+<table class= "fieldsTable">
+
+  <thead>
+
+  <tr>
+
+    <th> TransactionId </th>
+
+    <th> PersonId </th>
+
+    <th> PetId </th>
+
+
+  </tr>
+
+  </thead>
+
+  <tbody>
+
+  <tr *ngFor="let transaction of transactions">
+
+    <td>{{transaction.id}}</td>
+
+    <td>{{transaction.person}}</td>
+
+    <td>{{transaction.pet}}</td>
+
+  </tr>
+
+  </tbody>
+
+</table>

@@ -1,0 +1,6 @@
+rootProject.name = 'lab2x-team-ultimate'
+include 'common'
+include 'client'
+include 'server'
+include 'core_module'
+include 'web_module'

@@ -1,0 +1,13 @@
+en.ubb.pet_shop
+en.ubb.pet_shop.en.ubb.pet_shop.client.service
+en.ubb.pet_shop.en.ubb.pet_shop.client.domain
+en.ubb.pet_shop.en.ubb.pet_shop.client.domain.validators
+en.ubb.pet_shop.en.ubb.pet_shop.client.repository
+en.ubb.pet_shop.en.ubb.pet_shop.client.repository.csv_file
+en.ubb.pet_shop.en.ubb.pet_shop.client.repository.database
+en.ubb.pet_shop.en.ubb.pet_shop.client.repository.file
+en.ubb.pet_shop.en.ubb.pet_shop.client.client.ui
+pet_shop.controller
+pet_shop.en.ubb.pet_shop.client.domain
+pet_shop.en.ubb.pet_shop.client.repository
+pet_shop.en.ubb.pet_shop.client.repository.file

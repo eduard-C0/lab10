@@ -1,0 +1,5 @@
+id:4;name:pufi;species:dog;sellingprice:100.0
+id:5;name:filip;species:cat;sellingprice:122.0
+id:6;name:pufi;species:dog;sellingprice:100.0
+id:7;name:pufi;species:dog;sellingprice:100.0
+id:8;name:pufi;species:dog;sellingprice:100.0

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>en.ubb.pet_shop</OriginalElement>
+  <nodes>
+    <node x="1530.5" y="1424.0">en.ubb.pet_shop.controller.PersonController</node>
+    <node x="10.5" y="357.0">en.ubb.pet_shop.domain.Transaction</node>
+    <node x="535.5" y="1572.0">en.ubb.pet_shop.domain.validators.ValidatorException</node>
+    <node x="1409.0" y="1863.0">en.ubb.pet_shop.Main</node>
+    <node x="1098.0" y="1863.0">en.ubb.pet_shop.ui.MenuOption</node>
+    <node x="8.99810606060612" y="1280.0">en.ubb.pet_shop.repository.csv_file.CsvRepository</node>
+    <node x="1007.1875000000001" y="1280.0">en.ubb.pet_shop.repository.database.DatabaseRepository</node>
+    <node x="648.5" y="1863.0">en.ubb.pet_shop.domain.validators.Validator</node>
+    <node x="511.0" y="1720.0">en.ubb.pet_shop.repository.file.XmlException</node>
+    <node x="550.2291666666667" y="1064.0">en.ubb.pet_shop.repository.BaseFileRepository</node>
+    <node x="666.3125000000001" y="1280.0">en.ubb.pet_shop.repository.file.XmlRepository</node>
+    <node x="829.5" y="1424.0">en.ubb.pet_shop.controller.TransactionController</node>
+    <node x="315.0" y="1967.0">en.ubb.pet_shop.domain.validators.TransactionValidator</node>
+    <node x="285.5" y="468.0">en.ubb.pet_shop.repository.IRepository</node>
+    <node x="487.5" y="324.0">en.ubb.pet_shop.domain.Pet</node>
+    <node x="240.0" y="1720.0">en.ubb.pet_shop.repository.database.DatabaseException</node>
+    <node x="1379.1875" y="0.0">en.ubb.pet_shop.ui.ConsoleUI</node>
+    <node x="421.1041666666668" y="804.0">en.ubb.pet_shop.repository.InMemoryRepository</node>
+    <node x="763.5" y="357.0">en.ubb.pet_shop.domain.Person</node>
+    <node x="543.0" y="1967.0">en.ubb.pet_shop.domain.validators.BaseValidator</node>
+    <node x="909.0" y="1967.0">en.ubb.pet_shop.domain.validators.PetValidator</node>
+    <node x="0.0" y="1720.0">en.ubb.pet_shop.repository.csv_file.CsvException</node>
+    <node x="0.0" y="1863.0">en.ubb.pet_shop.controller.PetController</node>
+    <node x="389.75" y="1424.0">en.ubb.pet_shop.domain.validators.PetShopException</node>
+    <node x="625.5" y="0.0">en.ubb.pet_shop.domain.BaseEntity</node>
+    <node x="721.0" y="1967.0">en.ubb.pet_shop.domain.validators.PersonValidator</node>
+    <node x="215.5" y="1572.0">en.ubb.pet_shop.repository.BaseFileRepositoryException</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="en.ubb.pet_shop.domain.Transaction" target="en.ubb.pet_shop.domain.BaseEntity">
+      <point x="0.0" y="-182.0" />
+      <point x="138.0" y="284.0" />
+      <point x="668.0" y="284.0" />
+      <point x="-85.0" y="127.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.repository.BaseFileRepositoryException" target="en.ubb.pet_shop.domain.validators.PetShopException">
+      <point x="0.0" y="-49.0" />
+      <point x="365.5" y="1547.0" />
+      <point x="451.25" y="1547.0" />
+      <point x="-61.5" y="49.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.repository.csv_file.CsvRepository" target="en.ubb.pet_shop.repository.BaseFileRepository">
+      <point x="74.0" y="-49.5" />
+      <point x="230.99810606060612" y="1260.0" />
+      <point x="603.3958333333335" y="1260.0" />
+      <point x="-106.33333333333337" y="83.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.domain.validators.ValidatorException" target="en.ubb.pet_shop.domain.validators.PetShopException">
+      <point x="0.0" y="-49.0" />
+      <point x="660.0" y="1547.0" />
+      <point x="574.25" y="1547.0" />
+      <point x="61.5" y="49.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.repository.csv_file.CsvRepository" target="en.ubb.pet_shop.domain.BaseEntity">
+      <point x="-74.0" y="-49.5" />
+      <point x="82.99810606060612" y="1260.0" />
+      <point x="0.0" y="1260.0" />
+      <point x="0.0" y="274.0" />
+      <point x="639.6666666666666" y="274.0" />
+      <point x="-113.33333333333337" y="127.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.repository.BaseFileRepository" target="en.ubb.pet_shop.domain.BaseEntity">
+      <point x="79.75" y="-83.0" />
+      <point x="789.4791666666667" y="1039.0" />
+      <point x="1029.0" y="1039.0" />
+      <point x="1029.0" y="294.0" />
+      <point x="809.6666666666666" y="294.0" />
+      <point x="56.66666666666663" y="127.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.domain.Pet" target="en.ubb.pet_shop.domain.BaseEntity">
+      <point x="0.0" y="-215.0" />
+      <point x="615.0" y="304.0" />
+      <point x="724.6666666666666" y="304.0" />
+      <point x="-28.33333333333337" y="127.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.domain.validators.PersonValidator" target="en.ubb.pet_shop.domain.validators.Validator">
+      <point x="0.0" y="-27.0" />
+      <point x="805.0" y="1947.0" />
+      <point x="729.75" y="1947.0" />
+      <point x="16.25" y="27.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.domain.validators.BaseValidator" target="en.ubb.pet_shop.domain.validators.Validator">
+      <point x="0.0" y="-27.0" />
+      <point x="622.0" y="1947.0" />
+      <point x="697.25" y="1947.0" />
+      <point x="-16.25" y="27.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.repository.file.XmlRepository" target="en.ubb.pet_shop.repository.BaseFileRepository">
+      <point x="-74.5" y="-49.5" />
+      <point x="740.8125000000001" y="1260.0" />
+      <point x="709.7291666666667" y="1260.0" />
+      <point x="0.0" y="83.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.repository.InMemoryRepository" target="en.ubb.pet_shop.domain.BaseEntity">
+      <point x="60.25" y="-105.0" />
+      <point x="601.8541666666667" y="779.0" />
+      <point x="753.0" y="779.0" />
+      <point x="0.0" y="127.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.domain.Person" target="en.ubb.pet_shop.domain.BaseEntity">
+      <point x="0.0" y="-182.0" />
+      <point x="891.0" y="304.0" />
+      <point x="781.3333333333333" y="304.0" />
+      <point x="28.333333333333258" y="127.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.repository.csv_file.CsvException" target="en.ubb.pet_shop.repository.BaseFileRepositoryException">
+      <point x="0.0" y="-49.0" />
+      <point x="110.0" y="1695.0" />
+      <point x="265.5" y="1695.0" />
+      <point x="-100.0" y="49.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.repository.database.DatabaseRepository" target="en.ubb.pet_shop.repository.BaseFileRepository">
+      <point x="-81.75" y="-49.5" />
+      <point x="1088.9375" y="1250.0" />
+      <point x="816.0625" y="1250.0" />
+      <point x="106.33333333333326" y="83.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.repository.file.XmlRepository" target="en.ubb.pet_shop.domain.BaseEntity">
+      <point x="74.5" y="-49.5" />
+      <point x="889.8125000000001" y="1260.0" />
+      <point x="1079.625" y="1260.0" />
+      <point x="1079.625" y="284.0" />
+      <point x="838.0" y="284.0" />
+      <point x="85.0" y="127.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.domain.validators.TransactionValidator" target="en.ubb.pet_shop.domain.validators.Validator">
+      <point x="0.0" y="-27.0" />
+      <point x="419.0" y="1937.0" />
+      <point x="664.75" y="1937.0" />
+      <point x="-48.75" y="27.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.repository.file.XmlException" target="en.ubb.pet_shop.repository.BaseFileRepositoryException">
+      <point x="0.0" y="-49.0" />
+      <point x="622.0" y="1695.0" />
+      <point x="465.5" y="1695.0" />
+      <point x="100.0" y="49.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.repository.IRepository" target="en.ubb.pet_shop.domain.BaseEntity">
+      <point x="0.0" y="-71.0" />
+      <point x="376.5" y="294.0" />
+      <point x="696.3333333333334" y="294.0" />
+      <point x="-56.66666666666663" y="127.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.repository.database.DatabaseException" target="en.ubb.pet_shop.repository.BaseFileRepositoryException">
+      <point x="0.0" y="-49.0" />
+      <point x="0.0" y="49.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.repository.BaseFileRepository" target="en.ubb.pet_shop.repository.InMemoryRepository">
+      <point x="-79.75" y="-83.0" />
+      <point x="629.9791666666667" y="1039.0" />
+      <point x="541.6041666666667" y="1039.0" />
+      <point x="0.0" y="105.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.repository.InMemoryRepository" target="en.ubb.pet_shop.repository.IRepository">
+      <point x="-60.25" y="-105.0" />
+      <point x="481.3541666666668" y="779.0" />
+      <point x="376.5" y="779.0" />
+      <point x="0.0" y="71.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.domain.validators.PetValidator" target="en.ubb.pet_shop.domain.validators.Validator">
+      <point x="0.0" y="-27.0" />
+      <point x="981.0" y="1937.0" />
+      <point x="762.25" y="1937.0" />
+      <point x="48.75" y="27.0" />
+    </edge>
+    <edge source="en.ubb.pet_shop.repository.database.DatabaseRepository" target="en.ubb.pet_shop.domain.BaseEntity">
+      <point x="81.75" y="-49.5" />
+      <point x="1252.4375" y="274.0" />
+      <point x="866.3333333333333" y="274.0" />
+      <point x="113.33333333333326" y="127.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="516.0" y="223.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
