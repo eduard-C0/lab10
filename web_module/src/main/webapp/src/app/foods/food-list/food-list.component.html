@@ -1,0 +1,50 @@
+<h2>Foods</h2>
+<table class= "fieldsTable">
+
+  <thead>
+
+  <tr>
+
+    <th> FoodId </th>
+
+    <th> Name </th>
+
+    <th> Species </th>
+
+    <th> Description </th>
+
+    <th> Price </th>
+
+
+  </tr>
+
+  </thead>
+
+  <tbody>
+
+  <tr *ngFor="let food of foods">
+
+    <td>{{food.id}}</td>
+
+    <td>{{food.name}}</td>
+
+    <td>{{food.species}}</td>
+
+    <td>{{food.description}}</td>
+
+    <td>{{food.price}}</td>
+  </tr>
+
+  </tbody>
+
+</table>
+
+<div>
+
+  <label for="price">Price</label><br>
+  <input type="text" id="price" name="price" #price><br>
+
+  <button id = "sort" (click)="sortFood()" type = "button"> Sort </button>
+  <button id = "filter" (click)="filterFood(price.value)" type = "button"> FilterFoodByPrice </button>
+  <button id = "GetAllFoods" (click)="getFoods()" type = "button"> Get All Foods </button>
+</div>

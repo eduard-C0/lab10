@@ -24,4 +24,17 @@ export class PersonService {
     return this.httpClient
       .post<Person>(this.peopleUrl, person);
   }
+
+  deletePeople(id:number) : Observable<Person> {
+    const url = `${this.peopleUrl}/${id}`;
+    console.log(id);
+    return this.httpClient.delete<Person>(url);
+
+  }
+  updatePeople(person:Person) : Observable<Person> {
+    const url = `${this.peopleUrl}/${person.id}`;
+    return this.httpClient
+      .put<Person>(url, person);
+  }
+
 }

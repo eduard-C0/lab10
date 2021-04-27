@@ -31,3 +31,23 @@
   </tbody>
 
 </table>
+
+<div id="addDiv">
+  <form id="addForm">
+
+    <label for="id">PersonID</label><br>
+    <input type="text" id="id" name="id" #id><br>
+
+    <label for="name">Name</label><br>
+    <input type="text" id="name" name="name" required minlength="3" #name><br>
+    <label for="budget">Budget</label><br>
+    <input type="text" id="budget" name="budget" #budget><br>
+
+    <button id = "addButton" (click)="addPerson(name.value,budget.value)" type = "button"> Add person </button>
+    <button id = "deleteButton"(click)="deletePerson(id.value)" type = "button"> Delete person </button>
+    <button id = "updateButton"(click)="updatePerson(id.value,name.value,budget.value)" type = "button"> Update person </button>
+
+    <label id = "responseMessage" name = "responseMessage"></label>
+
+  </form>
+</div>

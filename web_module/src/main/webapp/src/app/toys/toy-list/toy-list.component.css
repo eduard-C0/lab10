@@ -1,0 +1,36 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+table {
+  border-collapse: separate;
+}
+
+th {
+  background-color: #4287f5;
+  color: white;
+}
+
+th,td {
+  width: 150px;
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948;
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442;
+}
+
+.form-group input,label{
+  width: 300px;
+  display: flex;
+
+}
+.form-group .alert-danger{
+  position: relative;
+  width: 200px;
+}
+

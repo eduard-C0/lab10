@@ -1,0 +1,107 @@
+<h2>Toys</h2>
+<table class= "fieldsTable">
+
+  <thead>
+
+  <tr>
+
+    <th> ToyId </th>
+
+    <th> Name </th>
+
+    <th> Species </th>
+
+    <th> Material </th>
+
+    <th> Price </th>
+
+
+  </tr>
+
+  </thead>
+
+  <tbody>
+
+  <tr *ngFor="let toy of toys">
+
+    <td>{{toy.id}}</td>
+
+    <td>{{toy.name}}</td>
+
+    <td>{{toy.species}}</td>
+
+    <td>{{toy.material}}</td>
+
+    <td>{{toy.price}}</td>
+  </tr>
+
+  </tbody>
+
+</table>
+
+<div>
+  <button id = "orderBy" (click)="orderBy()" type = "button"> OrderByPriceAsc </button>
+
+</div>
+
+<form #toyForm="ngForm" (ngSubmit)="onSubmit(toyForm)">
+  <div class="form-group">
+    <label for="name">Name</label><br>
+    <input class="form-control" id="name"
+           required minlength="3"
+           [(ngModel)]="model.name" name="name" #name="ngModel"><br>
+    <div *ngIf="name?.invalid && (name?.dirty || name?.touched)"
+         class="alert alert-danger">
+
+      <div *ngIf="name.errors?.required">
+        Name is required.
+      </div>
+      <div *ngIf="name.errors?.minlength">
+        Name must be at least 3 characters long.
+      </div>
+    </div>
+    <label for="species">Species</label><br>
+    <input class="form-control" id="species"
+           required minlength="3"
+           [(ngModel)]="model.species" name="species" #species="ngModel"><br>
+    <div *ngIf="species?.invalid && (species?.dirty || species?.touched)"
+         class="alert alert-danger">
+
+      <div *ngIf="species.errors?.required">
+        Species is required.
+      </div>
+      <div *ngIf="species.errors?.minlength">
+        Species must be at least 3 characters long.
+      </div>
+    </div>
+    <label for="material">Material</label><br>
+    <input class="form-control" id="material"
+           required minlength="3"
+           [(ngModel)]="model.material" name="material" #material="ngModel"><br>
+    <div *ngIf="material?.invalid && (material?.dirty || material?.touched)"
+         class="alert alert-danger">
+
+      <div *ngIf="material.errors?.required">
+        Material is required.
+      </div>
+      <div *ngIf="material.errors?.minlength">
+        Material must be at least 3 characters long.
+      </div>
+    </div>
+    <label for="price">Price</label><br>
+    <input class="form-control" id="price"
+           required
+           [(ngModel)]="model.price" name="price" #price="ngModel"><br>
+    <div *ngIf="price?.invalid && (price?.dirty || price?.touched)"
+         class="alert alert-danger">
+      <div *ngIf="price.errors?.required">
+        Price is required.
+      </div>
+    </div>
+
+
+  </div>
+  <button type="submit" class="btn btn-success" [disabled]="!toyForm.form.valid">Submit</button>
+</form>
+
+

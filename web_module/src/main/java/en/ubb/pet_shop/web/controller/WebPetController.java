@@ -38,12 +38,13 @@ public class WebPetController {
         return new ArrayList<>(petConverter.convertModelsToDtos(l));
     }
 
-    @RequestMapping(value = "/pets/species-filter/{species}")
-    MultiPetDto filterPetBySpecies(@PathVariable String species) throws IOException, ExecutionException, InterruptedException {
+    @RequestMapping(value = "/pets/species-filter/{species}",method = RequestMethod.GET)
+    List<PetDto> filterPetBySpecies(@PathVariable String species) throws IOException, ExecutionException, InterruptedException {
         log.trace("filterPetBySpecies: -method entered");
-        MultiPetDto multiPetDto = new MultiPetDto(petConverter.convertModelsToDtos(petController.filterPetBySpecies(species)));
+        List<Pet> l = petController.filterPetBySpecies(species);
+        MultiPetDto multiPetDto = new MultiPetDto(petConverter.convertModelsToDtos(l));
         log.trace("filterPetBySpecies: -method finished with result = {}", multiPetDto);
-        return multiPetDto;
+        return new ArrayList<>(petConverter.convertModelsToDtos(l));
     }
 
     @RequestMapping(value = "/pets", method = RequestMethod.POST)

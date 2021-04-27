@@ -34,3 +34,13 @@
   </tbody>
 
 </table>
+
+<div id="addDiv">
+  <form id="addForm">
+    <label for="species">Species</label><br>
+    <input type="text" id="species" name="species" #species><br>
+
+    <button id = "filterButton" (click)="filterPets(species.value)" type = "button"> Filter Pets </button>
+    <button id = "GetAllPets" (click)="getPets()" type = "button"> Get All Pets </button>
+  </form>
+</div>

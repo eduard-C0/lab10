@@ -24,4 +24,9 @@ export class PetService {
     return this.httpClient
       .post<Pet>(this.petsUrl, pet);
   }
+
+  filterPets(species:string):Observable<Pet[]>{
+    const url = `${this.petsUrl}/species-filter/${species}`;
+    return this.httpClient.get<Array<Pet>>(url);
+  }
 }

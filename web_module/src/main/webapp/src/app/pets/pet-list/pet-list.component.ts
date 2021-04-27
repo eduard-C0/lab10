@@ -28,6 +28,13 @@ export class PetListComponent implements OnInit {
       );
   }
 
+  filterPets(species:string){
+    this.petService.filterPets(species).subscribe(
+      pets => this.pets = pets,
+      error => this.errorMessage = <any>error
+    )
+  }
+
   onSelect(pet: Pet): void {
     this.selectedPet = pet;
   }
