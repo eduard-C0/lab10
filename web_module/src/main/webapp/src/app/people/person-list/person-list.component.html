@@ -31,23 +31,94 @@
   </tbody>
 
 </table>
-
-<div id="addDiv">
-  <form id="addForm">
-
-    <label for="id">PersonID</label><br>
-    <input type="text" id="id" name="id" #id><br>
-
-    <label for="name">Name</label><br>
-    <input type="text" id="name" name="name" required minlength="3" #name><br>
-    <label for="budget">Budget</label><br>
-    <input type="text" id="budget" name="budget" #budget><br>
-
-    <button id = "addButton" (click)="addPerson(name.value,budget.value)" type = "button"> Add person </button>
-    <button id = "deleteButton"(click)="deletePerson(id.value)" type = "button"> Delete person </button>
-    <button id = "updateButton"(click)="updatePerson(id.value,name.value,budget.value)" type = "button"> Update person </button>
-
-    <label id = "responseMessage" name = "responseMessage"></label>
-
+<button (click) ="toggleDisplayAdd()" type="button" class="Browse">View Add Form</button>
+<button (click)="toggleDisplayUpdate()" type="button" class="Browse">View Update Form</button>
+<button (click)="toggleDisplayDelete()" type="button" class="Browse">View Delete Form</button>
+<div id="addDiv" [hidden]="isShownAdd">
+  <form id="addForm" [formGroup]="addPersonForm" (ngSubmit)="addPersonF()">
+    <label for="name">
+      Name
+      <br>
+      <input id = "name" type="text" formControlName="personName">
+    </label>
+    <br>
+    <div class = "error" *ngIf="personName.errors?.required">
+      Name is required.
+    </div>
+    <div class = "error" *ngIf="personName.errors?.minlength">
+      Name must be at least 3 characters long.
+    </div>
+    <br>
+    <label for="budget">
+      Budget
+      <br>
+      <input id = "budget" type="text" formControlName="budget">
+    </label>
+    <div class = "error" *ngIf="budget.errors?.required">
+      Budget is required.
+    </div>
+    <div class = "error" *ngIf="budget.errors?.min || budget.errors?.pattern">
+      Budget cannot be negative.
+    </div>
+    <br>
+    <button type="submit" [disabled]="!addPersonForm.valid" class = bottom>Add</button>
+  </form>
+</div>
+<div id="updateDiv" [hidden]="isShownUpdate">
+  <form id="updateForm" [formGroup]="updatePersonForm" (ngSubmit)="updatePersonF()">
+    <label for="UpdateId">
+      ID
+      <br>
+      <input id="UpdateId" type="text" formControlName="personId">
+    </label>
+    <br>
+    <div class = "error" *ngIf="UpersonId.errors?.required">
+      ID is required.
+    </div>
+    <div class = "error" *ngIf="UpersonId.errors?.pattern">
+      ID must contain only letters.
+    </div>
+    <label for="Uname">
+      Name
+      <br>
+      <input id = "Uname" type="text" formControlName="personName">
+    </label>
+    <div class = "error" *ngIf="UpersonName.errors?.required">
+      Name is required.
+    </div>
+    <div class = "error" *ngIf="UpersonName.errors?.minlength">
+      Name must be at least 3 characters long.
+    </div>
+    <br>
+    <label for="Ubudget">
+      Budget
+      <br>
+      <input id = "Ubudget" type="text" formControlName="budget">
+    </label>
+    <div class = "error" *ngIf="Ubudget.errors?.required">
+      Budget is required.
+    </div>
+    <div class = "error" *ngIf="Ubudget.errors?.min || Ubudget.errors?.pattern">
+      Budget cannot be negative.
+    </div>
+    <br>
+    <button type="submit" [disabled]="!updatePersonForm.valid" class = bottom>Update</button>
+  </form>
+</div>
+<div id="deleteDiv" [hidden]="isShownDelete">
+  <form id="deleteForm" [formGroup]="deletePersonForm" (ngSubmit)="deletePersonF()">
+    <label for="DeleteId">
+      ID
+      <br>
+      <input id="DeleteId" type="text" formControlName="personId">
+    </label>
+    <br>
+    <div class = "error" *ngIf="DpersonId.errors?.required">
+      ID is required.
+    </div>
+    <div class = "error" *ngIf="DpersonId.errors?.pattern">
+      ID must contain only letters.
+    </div>
+    <button type="submit" [disabled]="!deletePersonForm.valid" class = bottom>Delete</button>
   </form>
 </div>

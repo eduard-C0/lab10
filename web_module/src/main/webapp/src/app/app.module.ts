@@ -12,7 +12,7 @@ import { PetNewComponent } from './pets/pet-new/pet-new.component';
 import { TransactionListComponent } from './transactions/transaction-list/transaction-list.component';
 import { TransactionNewComponent } from './transactions/transaction-new/transaction-new.component';
 import {HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {PersonService} from "./people/shared/person.service";
 import {PetService} from "./pets/shared/pet.service";
 import {TransactionService} from "./transactions/shared/transaction.service";
@@ -45,12 +45,13 @@ import {PersonListComponent} from "./people/person-list/person-list.component";
     ToyListComponent,
     ToyNewComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
   providers: [PersonService,PetService,TransactionService,FoodService,ToyService],
   bootstrap: [AppComponent]
 })
