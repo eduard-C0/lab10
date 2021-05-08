@@ -1,7 +1,7 @@
-import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
-import {Toy} from "./toy.model";
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {Toy} from './toy.model';
 
 
 @Injectable()
@@ -21,7 +21,7 @@ export class ToyService {
       .post<Toy>(this.toyUrl, toy);
   }
 
-  orderBy():Observable<Toy[]>{
+  orderBy(): Observable<Toy[]>{
     const url = `${this.toyUrl}/order-by-price/`;
     return this.httpClient.get<Array<Toy>>(url);
   }

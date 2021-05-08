@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
+@Builder
 public class Food extends BaseEntity<Integer>{
     private String name;
     private String species;

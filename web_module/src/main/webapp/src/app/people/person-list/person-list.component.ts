@@ -36,7 +36,7 @@ export class PersonListComponent implements OnInit {
 
   addPerson(name:String, budget:string)
   {
-    this.errorMessage = "";;
+    this.errorMessage = "";
     const newPerson: Person = <Person>{name, budget: +budget};
     this.personService.savePeople(newPerson).subscribe(response => {
       this.getPeople();

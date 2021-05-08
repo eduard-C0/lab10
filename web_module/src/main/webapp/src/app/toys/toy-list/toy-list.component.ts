@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {Food} from "../../foods/shared/food.model";
-import {FoodService} from "../../foods/shared/food.service";
-import {Router} from "@angular/router";
-import {Toy} from "../shared/toy.model";
-import {ToyService} from "../shared/toy.service";
-import {FormGroup} from "@angular/forms";
+import {Food} from '../../foods/shared/food.model';
+import {FoodService} from '../../foods/shared/food.service';
+import {Router} from '@angular/router';
+import {Toy} from '../shared/toy.model';
+import {ToyService} from '../shared/toy.service';
+import {FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-toy-list',
@@ -15,7 +15,7 @@ export class ToyListComponent implements OnInit {
   errorMessage: string | undefined;
   toys: Toy[] | undefined;
   selectedToy: Toy | undefined;
-  constructor(private toyService: ToyService, private router:Router) { this.toys = []}
+  constructor(private toyService: ToyService, private router: Router) { this.toys = []; }
   model = new Toy();
   ngOnInit(): void {
     this.toyService.getToys()
@@ -31,8 +31,8 @@ export class ToyListComponent implements OnInit {
   orderBy(){
     this.toyService.orderBy().subscribe(
       toys => this.toys = toys,
-      error => this.errorMessage = <any>error
-    )
+      error => this.errorMessage = (error as any)
+    );
   }
   get diagnostic() { return JSON.stringify(this.model); }
 
@@ -42,10 +42,10 @@ export class ToyListComponent implements OnInit {
     this.model = contactForm.value;
     this.toyService.saveToys(this.model).subscribe(response => {
       this.getToys();
-      let r: any = response;
+      const r: any = response;
       this.errorMessage = r.result;
 
-    })
+    });
   }
 
   getToys() {
